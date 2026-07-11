@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filmy i linki — pan od techniki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="titleblock">
+  <div class="titleblock-inner">
+    <a href="index.html" class="tb-mark">
+      <svg class="gear" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 4l3 6 6.5-2.5 1 7 7 1-2.5 6.5L44 24l-5 3 2.5 6.5-7 1-1 7-6.5-2.5-3 6-3-6-6.5 2.5-1-7-7-1 2.5-6.5L4 24l5-3-2.5-6.5 7-1 1-7L21 7z" stroke="#16324F" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="24" cy="24" r="7" stroke="#E8631C" stroke-width="2"/>
+      </svg>
+      <span>pan od techniki<span class="sub">kreślarnia &amp; warsztat</span></span>
+    </a>
+    <nav class="tb-nav">
+      <a href="index.html"><span class="num">00</span>start</a>
+      <a href="materialy.html"><span class="num">01</span>materiały</a>
+      <a href="filmy.html" class="active"><span class="num">02</span>filmy i linki</a>
+      <a href="golf/index.html"><span class="num">03</span>wyjazdy</a>
+      <a href="o-mnie.html"><span class="num">04</span>o mnie</a>
+    </nav>
+    <div class="tb-burger">MENU ☰</div>
+  </div>
+</header>
+
+<section class="hero blueprint" style="padding: 52px 24px 56px;">
+  <div class="hero-inner" style="grid-template-columns: 1fr;">
+    <div>
+      <div class="eyebrow">arkusz 02</div>
+      <h1 style="font-size: clamp(1.8rem, 4vw, 2.6rem);">Filmy i linki</h1>
+      <p class="lead">Własne nagrania krok po kroku oraz polecane filmy i strony innych autorów.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 40px;">
+  <h2>Moje filmiki</h2>
+  <p class="section-sub">Nagrane samodzielnie — pokazują konkretne czynności warsztatowe.</p>
+
+  <div class="sheet-grid">
+
+    <div class="video-card">
+      <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_1" title="Jak lutować płytkę z elementami elektronicznymi" loading="lazy" allowfullscreen></iframe>
+      <div class="video-body">
+        <h3>Jak lutować płytkę z elementami</h3>
+        <p>Podstawy lutowania — narzędzia, bezpieczeństwo, pierwsze połączenie.</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_2" title="Materiały i ich właściwości" loading="lazy" allowfullscreen></iframe>
+      <div class="video-body">
+        <h3>Materiały i ich właściwości</h3>
+        <p>Krótki przegląd materiałów używanych na lekcjach techniki.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="dimline">
+    <span class="label"><span class="tag">+</span>polecane</span>
+  </div>
+
+  <h2>Linki i filmy innych autorów</h2>
+  <p class="section-sub">Ciekawe strony i nagrania, które warto obejrzeć.</p>
+
+  <a class="link-row" href="https://www.brd.edu.pl" target="_blank" rel="noopener">
+    <div class="ico">BRD</div>
+    <div class="txt">
+      <h3>brd.edu.pl — bezpieczeństwo ruchu drogowego</h3>
+      <p>Materiały i testy przygotowujące do egzaminu na kartę rowerową.</p>
+    </div>
+  </a>
+
+  <a class="link-row" href="https://scratch.mit.edu" target="_blank" rel="noopener">
+    <div class="ico">SCR</div>
+    <div class="txt">
+      <h3>Scratch — programowanie blokowe</h3>
+      <p>Oficjalna strona Scratch, gdzie można tworzyć i uruchamiać własne projekty.</p>
+    </div>
+  </a>
+
+  <a class="link-row" href="#" target="_blank" rel="noopener">
+    <div class="ico">YT</div>
+    <div class="txt">
+      <h3>Tytuł polecanego filmu</h3>
+      <p>Krótki opis, czego dotyczy nagranie i dlaczego warto je obejrzeć.</p>
+    </div>
+  </a>
+
+</section>
+
+<footer>
+  <div class="foot-mark">pan od techniki</div>
+  <p>Strona prowadzona prywatnie, do użytku uczniów. © <span id="year"></span></p>
+</footer>
+
+<script src="assets/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

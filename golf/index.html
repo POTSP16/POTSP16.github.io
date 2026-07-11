@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wyjazdy — pan od techniki</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .gate {
+    max-width: 420px;
+    margin: 90px auto;
+    padding: 36px 32px;
+    background: #fff;
+    border: 1.5px solid var(--ink);
+    border-radius: 3px;
+    box-shadow: 6px 6px 0 var(--navy);
+    text-align: center;
+  }
+  .gate input {
+    width: 100%;
+    padding: 11px 14px;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    border: 1.5px solid var(--ink);
+    border-radius: 3px;
+    margin: 18px 0 10px;
+    text-align: center;
+  }
+  .gate .err { color: var(--orange-deep); font-size: 0.85rem; min-height: 18px; }
+  #content { display: none; }
+</style>
+</head>
+<body>
+
+<header class="titleblock">
+  <div class="titleblock-inner">
+    <a href="../index.html" class="tb-mark">
+      <svg class="gear" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 4l3 6 6.5-2.5 1 7 7 1-2.5 6.5L44 24l-5 3 2.5 6.5-7 1-1 7-6.5-2.5-3 6-3-6-6.5 2.5-1-7-7-1 2.5-6.5L4 24l5-3-2.5-6.5 7-1 1-7L21 7z" stroke="#16324F" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="24" cy="24" r="7" stroke="#E8631C" stroke-width="2"/>
+      </svg>
+      <span>pan od techniki<span class="sub">kreślarnia &amp; warsztat</span></span>
+    </a>
+    <nav class="tb-nav">
+      <a href="../index.html"><span class="num">00</span>start</a>
+      <a href="../materialy.html"><span class="num">01</span>materiały</a>
+      <a href="../filmy.html"><span class="num">02</span>filmy i linki</a>
+      <a href="index.html" class="active"><span class="num">03</span>wyjazdy</a>
+      <a href="../o-mnie.html"><span class="num">04</span>o mnie</a>
+    </nav>
+    <div class="tb-burger">MENU ☰</div>
+  </div>
+</header>
+
+<div class="gate" id="gate">
+  <div class="eyebrow" style="justify-content:center;">dostęp chroniony</div>
+  <h2 style="font-family:var(--font-display); font-size:1.3rem; margin-bottom:6px;">Wyjazdy golfowe ⛳</h2>
+  <p style="color:#666; font-size:0.9rem;">To nie dla uczniów. Podaj hasło.</p>
+  <input type="password" id="pwd" placeholder="hasło" autocomplete="off">
+  <div class="err" id="err"></div>
+  <button class="btn btn-primary" style="width:100%; justify-content:center; margin-top:6px;" onclick="checkPwd()">Wejdź</button>
+</div>
+
+<section class="section" id="content" style="padding-top: 40px;">
+  <div class="eyebrow">arkusz 03</div>
+  <h1 style="font-family:var(--font-display); font-size:1.9rem; margin-bottom:8px;">Wyjazdy golfowe</h1>
+  <p class="section-sub">Zdjęcia z wyjazdów, do pobrania. W dobrej jakości, prosto z Lightrooma.</p>
+
+  <div class="sheet-grid">
+
+    <a class="sheet" href="2025-09-mazury/index.html" style="text-decoration:none; color:inherit; display:block;">
+      <span class="sheet-tag">wrzesień 2025</span>
+      <h3>Mazury — pole golfowe nad jeziorem</h3>
+      <p>Trzy dni, dobra pogoda, jedna zagubiona piłka w trzcinach.</p>
+      <div class="sheet-meta">
+        <span class="filetype">JPG</span>
+        <span class="dl">otwórz →</span>
+      </div>
+    </a>
+
+    <a class="sheet" href="2025-05-kaszuby/index.html" style="text-decoration:none; color:inherit; display:block;">
+      <span class="sheet-tag">maj 2025</span>
+      <h3>Kaszuby — wyjazd majówkowy</h3>
+      <p>Pierwszy wyjazd w tym sezonie, ze zdjęciami przed deszczem i po.</p>
+      <div class="sheet-meta">
+        <span class="filetype">JPG</span>
+        <span class="dl">otwórz →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <p style="margin-top:32px; font-size:0.85rem; color:#999;">Nowe katalogi dochodzą po każdym wyjeździe.</p>
+</section>
+
+<footer>
+  <div class="foot-mark">pan od techniki</div>
+  <p>Strona prowadzona prywatnie. © <span id="year"></span></p>
+</footer>
+
+<script src="../assets/script.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Symboliczne zabezpieczenie - wystarczające by odstraszyć przypadkowego gościa,
+// nie chroni przed kimś kto zna się na rzeczy (to nie jest prawdziwa autoryzacja).
+const HASLO = "birdie2025"; // <-- zmień na własne hasło
+
+function checkPwd() {
+  const val = document.getElementById('pwd').value;
+  if (val === HASLO) {
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    sessionStorage.setItem('golf_ok', '1');
+  } else {
+    document.getElementById('err').textContent = 'Złe hasło.';
+  }
+}
+document.getElementById('pwd').addEventListener('keydown', e => {
+  if (e.key === 'Enter') checkPwd();
+});
+if (sessionStorage.getItem('golf_ok') === '1') {
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materiały — pan od techniki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="titleblock">
+  <div class="titleblock-inner">
+    <a href="index.html" class="tb-mark">
+      <svg class="gear" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 4l3 6 6.5-2.5 1 7 7 1-2.5 6.5L44 24l-5 3 2.5 6.5-7 1-1 7-6.5-2.5-3 6-3-6-6.5 2.5-1-7-7-1 2.5-6.5L4 24l5-3-2.5-6.5 7-1 1-7L21 7z" stroke="#16324F" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="24" cy="24" r="7" stroke="#E8631C" stroke-width="2"/>
+      </svg>
+      <span>pan od techniki<span class="sub">kreślarnia &amp; warsztat</span></span>
+    </a>
+    <nav class="tb-nav">
+      <a href="index.html"><span class="num">00</span>start</a>
+      <a href="materialy.html" class="active"><span class="num">01</span>materiały</a>
+      <a href="filmy.html"><span class="num">02</span>filmy i linki</a>
+      <a href="golf/index.html"><span class="num">03</span>wyjazdy</a>
+      <a href="o-mnie.html"><span class="num">04</span>o mnie</a>
+    </nav>
+    <div class="tb-burger">MENU ☰</div>
+  </div>
+</header>
+
+<section class="hero blueprint" style="padding: 52px 24px 56px;">
+  <div class="hero-inner" style="grid-template-columns: 1fr;">
+    <div>
+      <div class="eyebrow">arkusz 01</div>
+      <h1 style="font-size: clamp(1.8rem, 4vw, 2.6rem);">Materiały do pobrania</h1>
+      <p class="lead">Karty pracy, sprawdziany, prezentacje i pliki Scratch — wybierz klasę poniżej.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 40px;">
+
+  <div class="class-tabs" id="classTabs">
+    <button class="active" data-cls="k4">klasa 4</button>
+    <button data-cls="k5">klasa 5</button>
+    <button data-cls="k6">klasa 6</button>
+    <button data-cls="wszystkie">wszystkie pliki</button>
+  </div>
+
+  <!-- ===================== KLASA 4 ===================== -->
+  <div class="material-group active" id="k4">
+    <div class="callout">📌 Karta rowerowa — kartkówki, sprawdziany i materiały przygotowujące do egzaminu.</div>
+    <div class="sheet-grid">
+
+      <div class="sheet">
+        <span class="sheet-tag">karta rowerowa</span>
+        <h3>Kartkówka — znaki drogowe</h3>
+        <p>10 pytań, rozpoznawanie i interpretacja znaków.</p>
+        <div class="sheet-meta">
+          <span class="filetype">PDF</span>
+          <a class="dl" href="assets/files/k4-kartkowka-znaki-drogowe.pdf" download>pobierz ↓</a>
+        </div>
+      </div>
+
+      <div class="sheet">
+        <span class="sheet-tag">karta rowerowa</span>
+        <h3>Kartkówka — przepisy rowerowe</h3>
+        <p>UTO, UWR, hulajnogi elektryczne i podstawowe zasady ruchu.</p>
+        <div class="sheet-meta">
+          <span class="filetype">PDF</span>
+          <a class="dl" href="assets/files/k4-kartkowka-przepisy-rowerowe.pdf" download>pobierz ↓</a>
+        </div>
+      </div>
+
+      <div class="sheet">
+        <span class="sheet-tag">karta rowerowa</span>
+        <h3>Egzamin na kartę rowerową</h3>
+        <p>25 pytań — znaki, pierwszeństwo, wyposażenie roweru, pierwsza pomoc.</p>
+        <div class="sheet-meta">
+          <span class="filetype">PDF</span>
+          <a class="dl" href="assets/files/k4-egzamin-karta-rowerowa.pdf" download>pobierz ↓</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== KLASA 5 ===================== -->
+  <div class="material-group" id="k5">
+    <div class="callout">📐 Rysunek techniczny — pismo techniczne, elementy rysunku, wymiarowanie.</div>
+    <div class="sheet-grid">
+
+      <div class="sheet">
+        <span class="sheet-tag">rysunek techniczny</span>
+        <h3>Sprawdzian — rysunek techniczny</h3>
+        <p>25 pytań + zadanie praktyczne: zwymiaruj rysunek.</p>
+        <div class="sheet-meta">
+          <span class="filetype">PDF</span>
+          <a class="dl" href="assets/files/k5-sprawdzian-rysunek-techniczny.pdf" download>pobierz ↓</a>
+        </div>
+      </div>
+
+      <div class="sheet">
+        <span class="sheet-tag">rysunek techniczny</span>
+        <h3>Karta pracy — wymiarowanie</h3>
+        <p>Rysunek do samodzielnego zwymiarowania, skala 1:1.</p>
+        <div class="sheet-meta">
+          <span class="filetype">PDF</span>
+          <a class="dl" href="assets/files/k5-karta-pracy-wymiarowanie.pdf" download>pobierz ↓</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== KLASA 6 ===================== -->
+  <div class="material-group" id="k6">
+    <div class="callout">⚡ Elektronika, technika w domu i nowoczesny świat techniki.</div>
+    <div class="sheet-grid">
+
+      <div class="sheet">
+        <span class="sheet-tag">elektronika</span>
+        <h3>Karta pracy — elementy elektroniki</h3>
+        <p>Diody, tranzystory, rezystory, kondensatory i cewki — rozpoznawanie i opis.</p>
+        <div class="sheet-meta">
+          <span class="filetype">PDF</span>
+          <a class="dl" href="assets/files/k6-karta-pracy-elektronika.pdf" download>pobierz ↓</a>
+        </div>
+      </div>
+
+      <div class="sheet">
+        <span class="sheet-tag">technika</span>
+        <h3>Sprawdzian — technika klasa 6</h3>
+        <p>25 pytań: dom, instalacje, AGD, elektronika, mechatronika i roboty.</p>
+        <div class="sheet-meta">
+          <span class="filetype">PDF</span>
+          <a class="dl" href="assets/files/k6-sprawdzian-technika.pdf" download>pobierz ↓</a>
+        </div>
+      </div>
+
+      <div class="sheet">
+        <span class="sheet-tag">scratch</span>
+        <h3>Projekt Scratch — przykład</h3>
+        <p>Plik źródłowy do otwarcia w Scratch — podstawy programowania blokowego.</p>
+        <div class="sheet-meta">
+          <span class="filetype">SB3</span>
+          <a class="dl" href="assets/files/k6-projekt-scratch.sb3" download>pobierz ↓</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== WSZYSTKIE ===================== -->
+  <div class="material-group" id="wszystkie">
+    <p style="color:#666; margin-bottom: 20px;">Pełna lista — wszystkie pliki z trzech klas w jednym miejscu.</p>
+    <div class="sheet-grid">
+      <div class="sheet"><span class="sheet-tag">k4</span><h3>Kartkówka — znaki drogowe</h3><div class="sheet-meta"><span class="filetype">PDF</span><a class="dl" href="assets/files/k4-kartkowka-znaki-drogowe.pdf" download>pobierz ↓</a></div></div>
+      <div class="sheet"><span class="sheet-tag">k4</span><h3>Kartkówka — przepisy rowerowe</h3><div class="sheet-meta"><span class="filetype">PDF</span><a class="dl" href="assets/files/k4-kartkowka-przepisy-rowerowe.pdf" download>pobierz ↓</a></div></div>
+      <div class="sheet"><span class="sheet-tag">k4</span><h3>Egzamin — karta rowerowa</h3><div class="sheet-meta"><span class="filetype">PDF</span><a class="dl" href="assets/files/k4-egzamin-karta-rowerowa.pdf" download>pobierz ↓</a></div></div>
+      <div class="sheet"><span class="sheet-tag">k5</span><h3>Sprawdzian — rysunek techniczny</h3><div class="sheet-meta"><span class="filetype">PDF</span><a class="dl" href="assets/files/k5-sprawdzian-rysunek-techniczny.pdf" download>pobierz ↓</a></div></div>
+      <div class="sheet"><span class="sheet-tag">k5</span><h3>Karta pracy — wymiarowanie</h3><div class="sheet-meta"><span class="filetype">PDF</span><a class="dl" href="assets/files/k5-karta-pracy-wymiarowanie.pdf" download>pobierz ↓</a></div></div>
+      <div class="sheet"><span class="sheet-tag">k6</span><h3>Karta pracy — elementy elektroniki</h3><div class="sheet-meta"><span class="filetype">PDF</span><a class="dl" href="assets/files/k6-karta-pracy-elektronika.pdf" download>pobierz ↓</a></div></div>
+      <div class="sheet"><span class="sheet-tag">k6</span><h3>Sprawdzian — technika klasa 6</h3><div class="sheet-meta"><span class="filetype">PDF</span><a class="dl" href="assets/files/k6-sprawdzian-technika.pdf" download>pobierz ↓</a></div></div>
+      <div class="sheet"><span class="sheet-tag">k6</span><h3>Projekt Scratch — przykład</h3><div class="sheet-meta"><span class="filetype">SB3</span><a class="dl" href="assets/files/k6-projekt-scratch.sb3" download>pobierz ↓</a></div></div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="foot-mark">pan od techniki</div>
+  <p>Strona prowadzona prywatnie, do użytku uczniów. © <span id="year"></span></p>
+</footer>
+
+<script src="assets/script.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const tabs = document.querySelectorAll('#classTabs button');
+const groups = document.querySelectorAll('.material-group');
+tabs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabs.forEach(b => b.classList.remove('active'));
+    groups.forEach(g => g.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.cls).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mazury, wrzesień 2025 — pan od techniki</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .photo-grid a {
+    display: block;
+    border: 1.5px solid var(--ink);
+    border-radius: 2px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+  }
+  .photo-grid img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.2s ease;
+  }
+  .photo-grid a:hover img { transform: scale(1.04); }
+</style>
+</head>
+<body>
+
+<header class="titleblock">
+  <div class="titleblock-inner">
+    <a href="../../index.html" class="tb-mark">
+      <svg class="gear" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 4l3 6 6.5-2.5 1 7 7 1-2.5 6.5L44 24l-5 3 2.5 6.5-7 1-1 7-6.5-2.5-3 6-3-6-6.5 2.5-1-7-7-1 2.5-6.5L4 24l5-3-2.5-6.5 7-1 1-7L21 7z" stroke="#16324F" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="24" cy="24" r="7" stroke="#E8631C" stroke-width="2"/>
+      </svg>
+      <span>pan od techniki<span class="sub">kreślarnia &amp; warsztat</span></span>
+    </a>
+    <nav class="tb-nav">
+      <a href="../../index.html"><span class="num">00</span>start</a>
+      <a href="../../materialy.html"><span class="num">01</span>materiały</a>
+      <a href="../../filmy.html"><span class="num">02</span>filmy i linki</a>
+      <a href="../index.html" class="active"><span class="num">03</span>wyjazdy</a>
+      <a href="../../o-mnie.html"><span class="num">04</span>o mnie</a>
+    </nav>
+    <div class="tb-burger">MENU ☰</div>
+  </div>
+</header>
+
+<section class="section" style="padding-top: 40px;">
+  <a href="../index.html" style="font-family: var(--font-display); font-size: 0.85rem; color: var(--navy); text-decoration:none;">← wszystkie wyjazdy</a>
+  <h1 style="font-family:var(--font-display); font-size:1.8rem; margin: 14px 0 6px;">Mazury — wrzesień 2025</h1>
+  <p class="section-sub">Kliknij zdjęcie, żeby otworzyć pełny rozmiar i pobrać.</p>
+
+  <div class="photo-grid">
+    <!-- Każde zdjęcie: <a href="pełny_plik.jpg" target="_blank"><img src="pełny_plik.jpg"></a> -->
+    <a href="zdjecia/001.jpg" target="_blank"><img src="zdjecia/001.jpg" alt=""></a>
+    <a href="zdjecia/002.jpg" target="_blank"><img src="zdjecia/002.jpg" alt=""></a>
+    <a href="zdjecia/003.jpg" target="_blank"><img src="zdjecia/003.jpg" alt=""></a>
+    <a href="zdjecia/004.jpg" target="_blank"><img src="zdjecia/004.jpg" alt=""></a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-mark">pan od techniki</div>
+  <p>© <span id="year"></span></p>
+</footer>
+
+<script src="../../assets/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

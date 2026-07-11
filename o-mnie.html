@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O mnie — pan od techniki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="titleblock">
+  <div class="titleblock-inner">
+    <a href="index.html" class="tb-mark">
+      <svg class="gear" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 4l3 6 6.5-2.5 1 7 7 1-2.5 6.5L44 24l-5 3 2.5 6.5-7 1-1 7-6.5-2.5-3 6-3-6-6.5 2.5-1-7-7-1 2.5-6.5L4 24l5-3-2.5-6.5 7-1 1-7L21 7z" stroke="#16324F" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="24" cy="24" r="7" stroke="#E8631C" stroke-width="2"/>
+      </svg>
+      <span>pan od techniki<span class="sub">kreślarnia &amp; warsztat</span></span>
+    </a>
+    <nav class="tb-nav">
+      <a href="index.html"><span class="num">00</span>start</a>
+      <a href="materialy.html"><span class="num">01</span>materiały</a>
+      <a href="filmy.html"><span class="num">02</span>filmy i linki</a>
+      <a href="golf/index.html"><span class="num">03</span>wyjazdy</a>
+      <a href="o-mnie.html" class="active"><span class="num">04</span>o mnie</a>
+    </nav>
+    <div class="tb-burger">MENU ☰</div>
+  </div>
+</header>
+
+<section class="section" style="padding-top: 64px; max-width: 640px;">
+  <div class="eyebrow">arkusz 04</div>
+  <h2 style="font-size: 1.9rem; margin-bottom: 28px;">O mnie</h2>
+
+  <img src="assets/img/zdjecie.jpg" alt=""
+       style="width: 220px; height: 220px; object-fit: cover; border-radius: 4px; border: 1.5px solid var(--ink); box-shadow: 6px 6px 0 var(--navy); margin-bottom: 32px;">
+
+  <p style="font-size: 1.05rem; color: #444; max-width: 50ch;">
+    Uczę techniki. Lubię, gdy coś działa, bo samo się sprawdziło — nie bo tak wyszło.
+  </p>
+
+</section>
+
+<footer>
+  <div class="foot-mark">pan od techniki</div>
+  <p>Strona prowadzona prywatnie, do użytku uczniów. © <span id="year"></span></p>
+</footer>
+
+<script src="assets/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
